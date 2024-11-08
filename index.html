@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Builder</h1>
+        <form id="resumeForm">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <input type="text" id="linkedin" placeholder="LinkedIn Profile" required>
+            <input type="text" id="github" placeholder="GitHub Profile" required>
+            <textarea id="experience" placeholder="Work Experience" required></textarea>
+            <textarea id="education" placeholder="Education" required></textarea>
+            <input type="file" id="photo" accept="image/*" required>
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+        </form>
+        
+        <div id="resumePreview" class="resume-preview" style="display: none;">
+            <div id="resumeContent">
+                <h2 id="displayName"></h2>
+                <img id="displayPhoto" alt="Profile Photo">
+                <p>Email: <span id="displayEmail"></span></p>
+                <p>Phone: <span id="displayPhone"></span></p>
+                <p>LinkedIn: <a href="#" id="displayLinkedIn" target="_blank"></a></p>
+                <p>GitHub: <a href="#" id="displayGitHub" target="_blank"></a></p>
+                <h3>Work Experience</h3>
+                <p id="displayExperience"></p>
+                <h3>Education</h3>
+                <p id="displayEducation"></p>
+            </div>
+            <button onclick="downloadPDF()">Download as PDF</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
