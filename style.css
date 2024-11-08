@@ -5,6 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background: linear-gradient(to top, #000000, #585858); ;
 }
 
 .container {
@@ -14,6 +15,7 @@ body {
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    background-color: #fff;
 }
 
 h1, h2, h3 {
@@ -33,7 +35,7 @@ input, textarea, button {
 
 button {
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #4c6baf;
     color: white;
     border: none;
     border-radius: 5px;

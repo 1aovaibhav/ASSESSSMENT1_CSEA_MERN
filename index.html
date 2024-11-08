@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Builder</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- script to convert displayed resume to pdf -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Resume Builder</h1>
+        <h1 style="color: #4c6baf;">Resume Builder</h1>
+        <!-- html for taking inputs -->
         <form id="resumeForm">
             <input type="text" id="name" placeholder="Name" required>
             <input type="email" id="email" placeholder="Email" required>
@@ -22,6 +24,8 @@
             <button type="button" onclick="generateResume()">Generate Resume</button>
         </form>
         
+
+         <!-- html for displaying resume -->
         <div id="resumePreview" class="resume-preview" style="display: none;">
             <div id="resumeContent">
                 <h2 id="displayName"></h2>
